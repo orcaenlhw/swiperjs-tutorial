@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Swiper One Page
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content scrollY="false">
+
+    <swiper [config]="swiperConfig">
+      <ng-template swiperSlide>
+        <div class="slide-container"><img src="../../assets/image1.jpeg"></div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div class="slide-container"><img src="../../assets/image10.jpeg"></div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div class="slide-container"><img src="../../assets/image3.jpeg"></div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div class="slide-container"><img src="../../assets/image4.jpeg"></div>
+      </ng-template>
+
+    </swiper>
+</ion-content>
+
+<ion-footer>
+  <ion-button expand="full" color="success" (click)="back()">Home
+  </ion-button>
+</ion-footer>

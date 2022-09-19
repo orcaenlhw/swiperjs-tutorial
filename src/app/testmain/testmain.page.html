@@ -1,0 +1,311 @@
+<ion-header>
+  <ion-toolbar class="nav-bar" #toolbar>
+    <ion-buttons slot="start">
+      <ion-button mode="ios" #backnav class="pdp-back-nav" (click)="back()">
+        <ion-icon name="arrow-back" class="pdp-back-icon"></ion-icon>
+      </ion-button>
+      <ion-label class="pdp-name-nav" style="opacity: 0;" #namenav>
+        Universal car seat cover leather cushion veniam error harum iste amet hic asperiores nam ratione non
+      </ion-label>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button mode="ios" class="pdp-wishlist-nav" style="opacity: 0;" #wishlistnav>
+        <ion-icon name="heart-outline" class="pdp-wishlist-icon-nav"></ion-icon>
+      </ion-button>
+
+      <ion-button mode="ios" #cartnav class="pdp-cart-nav">
+        <img src="../../assets/icon.jpg" class="pdp-cart">
+      </ion-button>
+      <ion-button mode="ios" #sharenav class="pdp-share-nav">
+          <img src="../../assets/icon.jpg" class="pdp-share">
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content mode="md" [appHideAppBar]="toolbar" [appBackNav]="backnav" [appCartNav]="cartnav" [appShareNav]="sharenav" [appNameNav]="namenav" [appWishlistNav]="wishlistnav" scrollEvents="true">
+
+  <!-- <img src="../../assets/pexels9.jpg" class="pdp-image" /> -->
+
+  <swiper [pagination]="{type: 'fraction'}" [navigation]="true" class="mainSwiper" (slideChange)="onSlideChange()" #swiper>
+  <ng-template swiperSlide *ngFor="let img of images">
+    <img class="slideimg" src="../../assets/image{{ img }}.jpeg" (click)="toGallery(id)">
+  </ng-template>
+  </swiper>
+
+  <ion-card class="product-detail-card">
+      <ion-row class="pdp-price-section">
+          <ion-col size="10">
+              <p class="pdp-price"><b>50,000</b> Ks</p>
+          </ion-col>
+          <ion-col size="2">
+                <ion-button fill="outline" class="pdp-wishlist">
+                  <ion-icon name="heart-outline" class="pdp-wishlist-icon"></ion-icon>
+                </ion-button>
+          </ion-col>
+      </ion-row>
+
+      <ion-row class="pdp-name-section">
+          <p class="pdp-name">Universal car seat cover leather cushion veniam error harum iste amet hic asperiores nam ratione non</p>
+      </ion-row>
+      
+      <ion-row class="pdp-review-section">
+        <ion-col size="12">
+          <img src="../../assets/icon.jpg" class="pdp-rate-star" />
+          <p class="pdp-rate-number">4.0 
+              <span class="pdp-review-count">(2) Reviews</span>
+          </p>
+        </ion-col>
+        <ion-col size="12">
+          <p class="pdp-product">Automobile, 
+            <span class="pdp-cate">Car accessories</span> 
+          </p>
+        </ion-col>
+      </ion-row>
+  
+      <ion-row class="store">
+          <ion-col size="3">
+            <div class="img-wrapper">
+              <div class="thumb-img">
+                <img src="../../assets/icon.jpg" class="default-img" />
+              </div>
+            </div>
+          </ion-col>
+      
+        <ion-col size="6">
+          <ion-row class="store-info">
+            <ion-col size="11" class="store-name">
+              <h3 class="name-flex">AutoBay Motors</h3>
+            </ion-col>
+            <ion-col size="1" class="store-link">
+              <ion-icon name="chevron-forward-outline" class="forward-icon"></ion-icon>
+            </ion-col>
+          </ion-row>
+          <ion-row class="review-info">
+              <img src="../../assets/icon.jpg" class="rate-star">
+              <p class="rate-number">4.7 <span class="review-count">(32) Reviews</span></p>
+          </ion-row>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button fill="outline" class="follow-now">
+            <ion-label class="follow-label">Follow</ion-label>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      
+
+      <ion-row class="pdp-desc-section">
+        <ion-col size="12">
+          <h2 class="pdp-desc-header">Product description here</h2>
+          <p class="pdp-desc-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi voluptate sint totam sequi temporibus tempora blanditiis neque libero itaque quod minus veniam atque sed, et molestias incidunt, fugit ad repudiandae.</p>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="pdp-randr-section">
+        <ion-col size="7">
+          <h2 class="pdp-randr-header">Rating and Reviews</h2>
+        </ion-col>
+        <ion-col size="5">
+          <p class="pdp-randr-view-all">
+            <ion-label class="viewall">View all</ion-label>
+            <ion-icon slot="end" name="chevron-forward-outline" class="forward-icon"></ion-icon>
+          </p>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="pdp-randr-desc">
+        <ion-col size="3">
+          <div class="img-wrapper">
+            <div class="thumb-img">
+              <img src="../../assets/icon.jpg" class="default-img" />
+            </div>
+          </div>
+        </ion-col>
+    
+      <ion-col size="6">
+        <ion-row class="pdp-randr-detail">
+          <ion-col size="12" class="author-name">
+            <h3 class="name-flex">Rachel William Jones Cyntier</h3>
+          </ion-col>
+        </ion-row>
+        <ion-row class="pdp-randr-star">
+          <ion-col size="12">
+            <!-- <ionic5-star-rating activeIcon="star" defaultIcon="star" halfIcon="star-half" halfStar="true"
+                activeColor="#d82718" defaultColor="#C4C4C4" readonly="true"
+                fontSize="16px" class="starMargin">
+              </ionic5-star-rating> -->
+              <img src="../../assets/icon.jpg" class="rate-star">
+            <p class="rate-number">5.0</p>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col size="3">
+        <p class="author-date">5 days ago</p>
+      </ion-col>
+    </ion-row>
+    <ion-row class="pdp-randr-desc">
+      <ion-col size="3">
+        <div class="img-wrapper">
+          <div class="thumb-img">
+            <img src="../../assets/icon.jpg" class="default-img" />
+          </div>
+        </div>
+      </ion-col>
+  
+    <ion-col size="6">
+      <ion-row class="pdp-randr-detail">
+        <ion-col size="12" class="author-name">
+          <h3 class="name-flex">Rachel William Jones Cyntier</h3>
+        </ion-col>
+      </ion-row>
+      <ion-row class="pdp-randr-star">
+        <ion-col size="12">
+          <!-- <ionic5-star-rating activeIcon="star" defaultIcon="star" halfIcon="star-half" halfStar="true"
+              activeColor="#d82718" defaultColor="#C4C4C4" readonly="true"
+              fontSize="16px" class="starMargin">
+            </ionic5-star-rating> -->
+            <img src="../../assets/icon.jpg" class="rate-star">
+          <p class="rate-number">5.0</p>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+    <ion-col size="3">
+      <p class="author-date">5 days ago</p>
+    </ion-col>
+  </ion-row>
+  <ion-row class="pdp-randr-desc">
+    <ion-col size="3">
+      <div class="img-wrapper">
+        <div class="thumb-img">
+          <img src="../../assets/icon.jpg" class="default-img" />
+        </div>
+      </div>
+    </ion-col>
+
+  <ion-col size="6">
+    <ion-row class="pdp-randr-detail">
+      <ion-col size="12" class="author-name">
+        <h3 class="name-flex">Rachel William Jones Cyntier</h3>
+      </ion-col>
+    </ion-row>
+    <ion-row class="pdp-randr-star">
+      <ion-col size="12">
+        <!-- <ionic5-star-rating activeIcon="star" defaultIcon="star" halfIcon="star-half" halfStar="true"
+            activeColor="#d82718" defaultColor="#C4C4C4" readonly="true"
+            fontSize="16px" class="starMargin">
+          </ionic5-star-rating> -->
+          <img src="../../assets/icon.jpg" class="rate-star">
+        <p class="rate-number">5.0</p>
+      </ion-col>
+    </ion-row>
+  </ion-col>
+  <ion-col size="3">
+    <p class="author-date">5 days ago</p>
+  </ion-col>
+</ion-row>
+<ion-row class="pdp-randr-desc">
+  <ion-col size="3">
+    <div class="img-wrapper">
+      <div class="thumb-img">
+        <img src="../../assets/icon.jpg" class="default-img" />
+      </div>
+    </div>
+  </ion-col>
+
+<ion-col size="6">
+  <ion-row class="pdp-randr-detail">
+    <ion-col size="12" class="author-name">
+      <h3 class="name-flex">Rachel William Jones Cyntier</h3>
+    </ion-col>
+  </ion-row>
+  <ion-row class="pdp-randr-star">
+    <ion-col size="12">
+      <!-- <ionic5-star-rating activeIcon="star" defaultIcon="star" halfIcon="star-half" halfStar="true"
+          activeColor="#d82718" defaultColor="#C4C4C4" readonly="true"
+          fontSize="16px" class="starMargin">
+        </ionic5-star-rating> -->
+        <img src="../../assets/icon.jpg" class="rate-star">
+      <p class="rate-number">5.0</p>
+    </ion-col>
+  </ion-row>
+</ion-col>
+<ion-col size="3">
+  <p class="author-date">5 days ago</p>
+</ion-col>
+</ion-row>
+<ion-row class="pdp-randr-desc">
+<ion-col size="3">
+  <div class="img-wrapper">
+    <div class="thumb-img">
+      <img src="../../assets/icon.jpg" class="default-img" />
+    </div>
+  </div>
+</ion-col>
+
+<ion-col size="6">
+<ion-row class="pdp-randr-detail">
+  <ion-col size="12" class="author-name">
+    <h3 class="name-flex">Rachel William Jones Cyntier</h3>
+  </ion-col>
+</ion-row>
+<ion-row class="pdp-randr-star">
+  <ion-col size="12">
+    <!-- <ionic5-star-rating activeIcon="star" defaultIcon="star" halfIcon="star-half" halfStar="true"
+        activeColor="#d82718" defaultColor="#C4C4C4" readonly="true"
+        fontSize="16px" class="starMargin">
+      </ionic5-star-rating> -->
+      <img src="../../assets/icon.jpg" class="rate-star">
+    <p class="rate-number">5.0</p>
+  </ion-col>
+</ion-row>
+</ion-col>
+<ion-col size="3">
+<p class="author-date">5 days ago</p>
+</ion-col>
+</ion-row>
+<ion-row class="pdp-randr-desc">
+<ion-col size="3">
+  <div class="img-wrapper">
+    <div class="thumb-img">
+      <img src="../../assets/icon.jpg" class="default-img" />
+    </div>
+  </div>
+</ion-col>
+
+<ion-col size="6">
+<ion-row class="pdp-randr-detail">
+  <ion-col size="12" class="author-name">
+    <h3 class="name-flex">Rachel William Jones Cyntier</h3>
+  </ion-col>
+</ion-row>
+<ion-row class="pdp-randr-star">
+  <ion-col size="12">
+    <!-- <ionic5-star-rating activeIcon="star" defaultIcon="star" halfIcon="star-half" halfStar="true"
+        activeColor="#d82718" defaultColor="#C4C4C4" readonly="true"
+        fontSize="16px" class="starMargin">
+      </ionic5-star-rating> -->
+      <img src="../../assets/icon.jpg" class="rate-star">
+    <p class="rate-number">5.0</p>
+  </ion-col>
+</ion-row>
+</ion-col>
+<ion-col size="3">
+<p class="author-date">5 days ago</p>
+</ion-col>
+</ion-row>
+</ion-card>
+
+</ion-content>
+
+<ion-footer mode="ios">
+<ion-toolbar color="white" class="foot-bar">
+  <ion-buttons>
+    <ion-col size="6">
+      <ion-button class="add-to-cart">Add to cart</ion-button>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button class="buy-now">Buy now</ion-button>
+    </ion-col>
+    </ion-buttons>
+</ion-toolbar>
+</ion-footer>

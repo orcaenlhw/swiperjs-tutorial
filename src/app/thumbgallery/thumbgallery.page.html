@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Thumb Gallery Page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <swiper
+  style="--swiper-navigation-color: #fff;--swiper-pagination-color: #fff"
+  [spaceBetween]="10"
+  [navigation]="true"
+  [thumbs]="{ swiper: thumbsSwiper }"
+  class="mySwiper2"
+>
+<ng-template swiperSlide *ngFor="let img of images">
+  <img class="slideimg" src="../../assets/image{{ img }}.jpeg">
+</ng-template>
+</swiper>
+<swiper
+  (swiper)="thumbsSwiper = $event"
+  [spaceBetween]="10"
+  [slidesPerView]="4"
+  [freeMode]="true"
+  [watchSlidesProgress]="true"
+  class="mySwiper"
+>
+<ng-template swiperSlide *ngFor="let img of images">
+  <img class="slideimg" src="../../assets/image{{ img }}.jpeg">
+</ng-template>
+</swiper>
+
+</ion-content>
+
+<ion-footer>
+  <ion-button expand="full" color="success" (click)="back()">Home
+  </ion-button>
+</ion-footer>

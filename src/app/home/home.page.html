@@ -1,20 +1,77 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    Home Page
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+    <!-- <ion-button expand="full" color="success" (click)="swiperOneClicked()">
+      <ion-icon name="caret-forward-circle"></ion-icon>Swiper One
+    </ion-button>
+    <ion-button expand="full" color="danger"  (click)="swiperTwoClicked()">
+      <ion-icon name="caret-forward-circle"></ion-icon>Swiper Two
+    </ion-button>
+    <ion-button expand="full" color="primary" (click)="swiperThreeClicked()">
+      <ion-icon name="caret-forward-circle"></ion-icon>Swiper Three
+    </ion-button>
+    <ion-button expand="full" color="warning"  (click)="swiperFourClicked()">
+      <ion-icon name="caret-forward-circle"></ion-icon>Swiper Four
+    </ion-button>
+    <ion-button expand="full" color="success"  (click)="swiperFiveClicked()">
+      <ion-icon name="caret-forward-circle"></ion-icon>Swiper Five
+    </ion-button> -->
+    <br/>
+    <ion-button expand="full" color="warning"  (click)="paginationClicked()">
+      <ion-icon name="caret-forward-circle"></ion-icon>Pagination
+    </ion-button>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <ion-button expand="full" color="danger"  (click)="thumbgalleryClicked()">
+      <ion-icon name="caret-forward-circle"></ion-icon>Thumb Gallery Page
+    </ion-button>
+
+    <ion-button expand="full" color="primary"  (click)="testingClicked()">
+      <ion-icon name="caret-forward-circle"></ion-icon>Testing Page
+    </ion-button>
+
+    <ion-button expand="full" color="success"  (click)="testmainClicked()">
+      <ion-icon name="caret-forward-circle"></ion-icon>Test Main Page
+    </ion-button>
+
+    <!-- <swiper [pagination]="{type: 'fraction'}" [navigation]="true" class="mySwiper">
+      <ng-template swiperSlide *ngFor="let img of images">
+        <img src="../../assets/pexels{{img}}.jpg">
+      </ng-template>
+  </swiper> -->
+
+    <!-- <swiper #swiper (slideChange)="onBigSlideChange()" [config]="config">
+      <ng-template swiperSlide *ngFor="let img of images">
+        <img src="../../assets/pexels{{img}}.jpg">
+      </ng-template>
+    </swiper> -->
+
+    <!-- <swiper (slideChange)="onSmallSlideChange()" [config]="smallSwiper">
+      <ng-template swiperSlide *ngFor="let img of images">
+        <img src="../../assets/pexels{{img}}.jpg">
+      </ng-template>
+    </swiper>
+
+    <swiper pager [config]="features">
+      <ng-template swiperSlide *ngFor="let img of images">
+        <img src="../../assets/pexels{{img}}.jpg">
+      </ng-template>
+    </swiper> -->
+
+
+    <!-- <swiper (swiper)="onSwiper($event)" (beforeTransitionStart)="onBeforeTransitionStart()">
+      <ng-template swiperSlide>Slide 1</ng-template>
+      <ng-template swiperSlide>Slide 2</ng-template>
+      <ng-template swiperSlide>Slide 3</ng-template>
+    </swiper> -->
+
+    <!-- <swiper [slidesPerView]="1" [spaceBetween]="50" [virtual]="true">
+      <ng-container *ngFor="let slide of slides; index as i">
+        <ng-template swiperSlide>Slide {{ slide }}</ng-template>
+      </ng-container>
+    </swiper> -->
+
 </ion-content>

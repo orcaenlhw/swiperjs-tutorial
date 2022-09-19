@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>swiperthree</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <swiper #swiper [config]="config">
+    <ng-template swiperSlide *ngFor="let img of images">
+      <img src="../../assets/image{{img}}.jpeg">
+    </ng-template>
+  </swiper>
+
+</ion-content>
+
+
+<ion-footer>
+  <ion-button expand="full" color="primary" (click)="back()">Home
+  </ion-button>
+</ion-footer>

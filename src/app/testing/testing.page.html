@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">
+        <ion-icon mode="md" slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <swiper [navigation]="true" [pagination]="{type: 'fraction'}" [thumbs]="{ swiper: thumbsSwiper }"
+  class="topSwiper" #topSwiper [config]="topConfig">
+  <ng-template swiperSlide *ngFor="let img of images">
+    <img class="slideimg" src="../../assets/image{{ img }}.jpeg">
+  </ng-template>
+</swiper>
+
+
+<swiper (swiper)="thumbsSwiper = $event" [slidesPerView]="3" class="bottomSwiper" [navigation]="true" [config]="thumbConfig">
+  <ng-template swiperSlide *ngFor="let img of images">
+    <img class="slideimg" src="../../assets/image{{ img }}.jpeg">
+  </ng-template>
+</swiper>
+
+</ion-content>
+
+<ion-footer>
+  <ion-button expand="full" color="success" (click)="back()">Home
+  </ion-button>
+</ion-footer>
