@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { NavController } from '@ionic/angular';
 
 import { SwiperComponent, } from "swiper/angular";
-import SwiperCore, { Pagination, Navigation } from "swiper";
+import SwiperCore, { Pagination, Navigation, SwiperOptions } from "swiper";
 
 SwiperCore.use([Pagination, Navigation]);
 
